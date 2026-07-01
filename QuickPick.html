@@ -278,6 +278,95 @@ body.dark .edit-loc-btn:hover { background: #1e2f4a; color: #60a5fa; }
   }
 
 
+  /* ── MOBILE (max-width: 768px) ───────────────────────────────────────────── */
+  @media (max-width: 768px) {
+
+    /* Base */
+    html, body { overflow-x: hidden; }
+    body { font-size: 15px; }
+
+    /* Navbar */
+    .navbar { padding: 12px 16px; }
+    .nav-links { gap: 4px; }
+    .nav-links a { font-size: 13px; padding: 10px 12px; min-height: 44px; display: flex; align-items: center; }
+    .navbar h1 { font-size: 17px; }
+
+    /* Hero */
+    .hero { padding: 40px 16px 32px; }
+    .hero-icon { font-size: 52px; margin-bottom: 14px; }
+    .hero h2 { font-size: 22px; }
+    .hero p { font-size: 14px; }
+    .hero-btn { padding: 14px 28px; font-size: 15px; width: 100%; box-sizing: border-box; min-height: 44px; }
+
+    /* Hero search */
+    #heroSearch { font-size: 16px !important; padding: 14px 20px !important; }
+
+    /* Inventory page */
+    .main { padding: 20px 16px; }
+    .section-title { font-size: 20px; margin-left: 0; }
+    .search-box { width: 100%; box-sizing: border-box; font-size: 16px; padding: 14px 20px; }
+    .summary-bar { width: 100%; flex-direction: row; gap: 10px; }
+    .summary-card { padding: 14px 10px; }
+    .summary-number { font-size: 26px; }
+    .filter-bar { width: 100%; gap: 6px; }
+    .filter-btn { font-size: 12px; padding: 8px 12px; min-height: 36px; }
+
+    /* Table → Card layout */
+    .inventory-table { width: 100%; display: block; }
+    .inventory-table thead { display: none; }
+    .inventory-table tbody { display: block; width: 100%; }
+    .inventory-table tbody tr { display: flex; flex-direction: column; background: white; border-radius: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); margin-bottom: 12px; padding: 14px 16px; gap: 8px; }
+    .inventory-table tbody tr:hover { transform: none; }
+    .inventory-table td { display: flex; align-items: center; justify-content: space-between; padding: 4px 0; font-size: 13px; background: transparent; border-radius: 0 !important; box-shadow: none !important; }
+    .inventory-table td:first-child { font-size: 11px; color: #999; border-bottom: 1px solid #f0f0f0; padding-bottom: 8px; margin-bottom: 4px; }
+    .inventory-table td:nth-child(2) { font-size: 15px; font-weight: 700; }
+    .inventory-table td:nth-child(2) > div:first-child { display: none; } /* hide box icon on mobile */
+    .take-btn { width: 100%; padding: 12px; font-size: 14px; min-height: 44px; border-radius: 10px; margin-top: 6px; }
+
+    /* Modals */
+    .modal-overlay { align-items: flex-end; padding: 0; }
+    .modal-box { border-radius: 20px 20px 0 0; padding: 28px 20px 36px; width: 100%; max-width: 100%; max-height: 92vh; overflow-y: auto; box-sizing: border-box; }
+    .modal-input { font-size: 16px; padding: 13px 14px; min-height: 44px; box-sizing: border-box; width: 100%; }
+    .modal-submit-btn, .modal-cancel-btn { min-height: 48px; font-size: 15px; }
+    .modal-item-name { font-size: 16px; }
+
+    /* Auth modal */
+    .auth-modal-overlay { align-items: flex-end; padding: 0; }
+    .auth-modal-box { border-radius: 20px 20px 0 0; padding: 28px 20px 40px; max-width: 100%; width: 100%; max-height: 92vh; overflow-y: auto; box-sizing: border-box; }
+
+    /* Log page */
+    .page-inner { padding: 20px 16px; }
+    .toolbar { flex-direction: column; gap: 8px; }
+    .toolbar input { width: 100%; box-sizing: border-box; font-size: 16px; min-height: 44px; }
+    .export-btn, .clear-btn { width: 100%; min-height: 44px; text-align: center; }
+    .log-table { display: block; width: 100%; }
+    .log-table thead { display: none; }
+    .log-table tbody { display: block; }
+    .log-table tbody tr { display: flex; flex-direction: column; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); margin-bottom: 10px; padding: 14px 16px; gap: 6px; }
+    .log-table td { display: flex; justify-content: space-between; font-size: 13px; padding: 3px 0; background: transparent; border-radius: 0 !important; }
+    .log-table td::before { content: attr(data-label); font-weight: 700; color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; margin-right: 8px; flex-shrink: 0; }
+
+    /* Analytics */
+    .analytics-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .analytics-card .big-num { font-size: 26px; }
+    .top-bar-wrap { display: none; }
+
+    /* Image review */
+    .review-grid { grid-template-columns: 1fr; gap: 14px; }
+
+    /* About */
+    .about-content { padding: 0 16px; margin: 30px auto; }
+    .about-content h2 { font-size: 22px; }
+
+    /* Footer */
+    .site-footer { padding: 24px 16px 32px; }
+    .footer-admin-links { flex-direction: column; gap: 10px; }
+    .footer-admin-btn { padding: 16px; min-height: 60px; }
+
+    /* Pickup popup */
+    #pickupConfirmPopup > div { border-radius: 20px 20px 0 0 !important; position: fixed; bottom: 0; left: 0; right: 0; max-width: 100% !important; margin: 0 !important; }
+  }
+
   @media print {
     .navbar,.atab-bar,.toolbar,.export-btn,.clear-btn,#logout-btn,.auth-modal-overlay,.admin-toast,.inactivity-banner,.site-footer { display:none!important; }
     body { background:white; }
